@@ -1,43 +1,42 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+
 
 .navbar {
-    background-color: #333435;
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .navbar-brand {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #ffffff;
-    text-decoration: none;
-  }
-  
-  .navbar-menu {
-    display: flex;
-    gap: 1.5rem;
-  }
+  background-color: var(--primary-color);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  /* Styles for the logo */
+  margin-right: auto; /* Pushes the logo to the left */
+  width: 100px; /* Adjust the width as needed */
+  height: auto; /* Adjust the height as needed */
+}
+
+.navbar-menu {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-grow: 1; /* Allows the menu to take up remaining space */
+}
   
   .navbar-item {
     color: #ffffff;
+    margin: 1 auto;
     text-decoration: none;
     font-size: 1rem;
     transition: color 0.3s ease;
   }
   
   .navbar-item:hover {
-    color: #4CAF50;
+    color: var(--secondary-color);
   }
   
   .navbar-button {
-    background-color: #4CAF50;
+    background-color: var(--secondary-color);
     color: white;
     border: none;
     padding: 0.5rem 1rem;
@@ -47,6 +46,28 @@
   }
   
   .navbar-button:hover {
-    background-color: #45a049;
+    background-color: var(--secondary-color);
   }
   
+  @media (width >=1280px) {
+    header {
+      position: relative;
+      z-index: 1;
+    }
+  
+    nav>img {
+      display: initial;
+    }
+  
+    .mobile-menu {
+      display: none;
+    }
+  
+    .mobile-menu-content {
+      display: none;
+    }
+  }
+  
+  header{
+    margin-top: 1rem;
+  }
